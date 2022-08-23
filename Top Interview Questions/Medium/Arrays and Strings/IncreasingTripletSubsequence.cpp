@@ -5,6 +5,7 @@ public:
         int n = v.size();
         int x = INT_MAX;
         int y = INT_MAX;
+        //x and y to store two elements that are lesser than the current one if exists
         for(int i=0;i<n;i++)
         {
             if(v[i]<x)
