@@ -43,3 +43,35 @@ public:
         return;
     }
 };
+
+//Iterative Solution using Queue Same approach
+
+class Solution {
+public:
+    vector<vector<int>> levelOrder(TreeNode* root)
+    {
+        vector<vector<int>> result;
+        queue<TreeNode*> q;
+        q.push(root);
+        while (!q.empty())
+        {
+            int n = q.size();
+            vector<int>v;
+            for (int i = 0; i < n; i++)
+            {
+                TreeNode* p = q.front();
+                q.pop();
+                if (p != NULL)
+                {
+                    v.push_back(p->val);
+                    q.push(p->left);
+                    q.push(p->right);
+                }
+            }
+            
+            if (v.size() > 0) 
+                result.push_back(v);
+        }
+        return result;
+    }
+};
