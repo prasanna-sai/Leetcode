@@ -45,7 +45,7 @@ public:
     }
 };
 
-//We can use simpler STL loser_bound and upper_bound too
+//We can use simpler STL lower_bound and upper_bound too
 
 class Solution
 {
