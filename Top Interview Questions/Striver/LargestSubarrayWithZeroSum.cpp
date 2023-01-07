@@ -12,6 +12,7 @@ class Solution
                 if(sum == 0)
                 {
                     ans = i+1;
+                    continue;
                 }
                 if(um.find(sum) != um.end())
                 {
