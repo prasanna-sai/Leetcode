@@ -8,18 +8,19 @@ class Solution
             {
                 if(v[i] > v[i-1])
                 {
-                    int mn = v[i];
-                    int idx = i;
-                    for(int j = i+1;j<n;j++)
+                    int val = v[i-1];
+                    int currMin = v[i];
+                    int swapIndex = i;
+                    for(int j=i+1;j<n;j++)
                     {
-                        if(v[j] > v[i-1] && v[j]<mn)
+                        if(v[j] > val && v[j] < currMin)
                         {
-                            mn = v[j];
-                            idx = j;
+                            swapIndex = j;
+                            currMin = v[j];
                         }
                     }
-                    swap(v[idx],v[i-1]);
-                    sort(v.begin()+i,v.end());
+                    swap(v[i-1],v[swapIndex]);
+                    sort(v.begin()+i, v.end());
                     return;
                 }
             }
