@@ -5,15 +5,15 @@ public:
         int n = v.size();
         vector<int>lm(n,0),rm(n,0);
         int x = v[0];
-        for(int i=1;i<n-1;i++)
+        for(int i=1;i<n;i++)
         {
-            x =  max(x,v[i-1]);
+            x = max(x,v[i-1]);
             lm[i] = x;
         }
         x = v[n-1];
-        for(int i=n-2;i>0;i--)
+        for(int i=n-2;i>=0;i--)
         {
-            x = max(x,v[i]);
+            x = max(x,v[i+1]);
             rm[i] = x;
         }
         int ans = 0;

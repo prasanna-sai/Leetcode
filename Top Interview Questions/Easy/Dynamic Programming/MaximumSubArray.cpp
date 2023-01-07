@@ -15,3 +15,20 @@ public:
         return ans;
     }
 };
+
+class Solution {
+public:
+    int maxSubArray(vector<int>& v)
+    {
+        int n = v.size();
+        int ans = v[0];
+        int currSum = v[0];
+        for(int i=1;i<n;i++)
+        {
+            currSum = max(currSum,0);
+            currSum += v[i];
+            ans = max(ans, currSum);
+        }
+        return ans;
+    }
+};

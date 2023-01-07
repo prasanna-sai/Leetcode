@@ -39,7 +39,7 @@ Node* helper(Node* x, Node* y)
     return merged;
 }
 
-/*  Function which returns the  root of 
+/*  Function which returns the root of 
     the flattened linked list. */
 Node *flatten(Node *root)
 {

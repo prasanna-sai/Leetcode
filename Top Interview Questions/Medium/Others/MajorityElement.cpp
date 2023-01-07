@@ -53,23 +53,21 @@ class Solution {
     }
 }
 
-Class Solution {
+class Solution {
 public:
-    int majorityElement(vector<int>& v)
-    {
+    int majorityElement(vector<int>& v) {
         int n = v.size();
-        int ele = -1;
+        int ans = -1;
         int count = 0;
-        for(auto i : v)
+        for(int i=0;i<n;i++)
         {
             if(count == 0)
             {
-                ele = i;
-                count 
+                ans = v[i];
             }
-            count += (ele == i) ? 1 : -1;
+            count += (ans == v[i]) ? 1 : -1;
         }
-        return ele;
+        return ans;
     }
 };
 
