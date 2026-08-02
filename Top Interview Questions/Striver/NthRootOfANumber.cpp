@@ -29,7 +29,7 @@ int main()
         if(x == 1)
         {
             cout<<mid<<endl;
-            break;
+            return 0;
         }
         else if(x == 2)
         {
